@@ -7,9 +7,13 @@
     "lint": "turbo run lint",
     "check-types": "turbo run check-types",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
-    "shadcnadd": "pnpm dlx shadcn@latest add --cwd packages/ui"
+    "shadcnadd": "pnpm dlx shadcn@latest add --cwd packages/ui",
+    "prepare": "husky",
+    "pre-commit-hook": "npm run typecheck && lint-staged"
   },
   "devDependencies": {
+    "husky": "^9.1.7",
+    "lint-staged": "^16.2.7",
     "prettier": "^3.6.0",
     "prettier-plugin-tailwindcss": "^0.7.1",
     "turbo": "^2.7.3"
