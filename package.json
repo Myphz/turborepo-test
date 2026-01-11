@@ -9,7 +9,7 @@
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
     "shadcnadd": "pnpm dlx shadcn@latest add --cwd packages/ui",
     "prepare": "husky",
-    "pre-commit-hook": "npm run typecheck && lint-staged"
+    "pre-commit-hook": "pnpm check-types && lint-staged"
   },
   "devDependencies": {
     "husky": "^9.1.7",
